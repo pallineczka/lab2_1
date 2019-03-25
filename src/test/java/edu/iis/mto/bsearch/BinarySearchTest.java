@@ -83,6 +83,6 @@ public class BinarySearchTest {
 
         SearchResult searchResult = BinarySearch.search(key, seq);
         Assert.assertThat(searchResult.isFound(),is(true));
-        Assert.assertThat(searchResult.getPosition(),is(1));
+        Assert.assertThat(searchResult.getPosition(),is(0));
     }
 }
