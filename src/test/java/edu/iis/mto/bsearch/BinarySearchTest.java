@@ -1,19 +1,23 @@
 package edu.iis.mto.bsearch;
 
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.hamcrest.CoreMatchers.is;
 
 public class BinarySearchTest {
 
-    @Test public void testEmptySeq() throws IllegalArgumentException {
-        int[] seq = new int[0];
+    @Rule
+    public final ExpectedException exception = ExpectedException.none();
+
+    @Test public void testEmptySeq() {
+        int[] seq = {};
         int key = 5;
 
-        SearchResult searchResult = BinarySearch.search(key, seq);
-        Assert.assertThat(searchResult.isFound(),is(false));
-        Assert.assertThat(searchResult.getPosition(),is(-1));
+        exception.expect(IllegalArgumentException.class);
+        BinarySearch.search(key, seq);
     }
 
     @Test
