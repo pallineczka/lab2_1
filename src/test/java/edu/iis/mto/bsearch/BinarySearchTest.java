@@ -25,7 +25,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void testElementNotExistInSeq() {
+    public void testElementNotExistInOneElementSeq() {
         int[] seq = {9};
         int key = 5;
 
@@ -65,7 +65,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void testElementIsNotExistInSeq() {
+    public void testElementNotExistInSeq() {
         int[] seq = {3, 6, 9};
         int key = 5;
 
