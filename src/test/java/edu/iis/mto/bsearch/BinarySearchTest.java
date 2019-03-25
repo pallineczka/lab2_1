@@ -73,4 +73,14 @@ public class BinarySearchTest {
         Assert.assertFalse(searchResult.isFound());
         Assert.assertEquals(-1, searchResult.getPosition());
     }
+
+    @Test
+    public void testElementIsNegativeInSeq() {
+        int[] seq = {-3, 6, 9};
+        int key = -3;
+
+        SearchResult searchResult = BinarySearch.search(key, seq);
+        Assert.assertTrue(searchResult.isFound());
+        Assert.assertEquals(1, searchResult.getPosition());
+    }
 }
